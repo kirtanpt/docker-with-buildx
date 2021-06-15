@@ -1,7 +1,9 @@
 ARG BUILDX_VERSION=0.4.2
 ARG DOCKER_VERSION=latest
 
-FROM ubuntu AS fetcher
+FROM alpine AS fetcher
+
+RUN apk add curl
 
 ARG BUILDX_VERSION
 RUN curl -L \
