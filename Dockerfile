@@ -3,8 +3,6 @@ ARG DOCKER_VERSION=latest
 
 FROM ubuntu AS fetcher
 
-RUN apk add curl
-
 ARG BUILDX_VERSION
 RUN curl -L \
   --output /docker-buildx \
